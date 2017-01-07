@@ -10,6 +10,12 @@ $ docker build -t ben/data_sql ./data_sql/
 $ docker build -t ben/sql ./sql/
 $ docker build -t ben/phpmyadmin ./phpmyadmin/
 ```
+OR
+
+In Symfony directory, run the commands :
+```bash
+$ docker-compose build
+```
 
 2 : Modify docker-compose.yml
 -----------------------------
