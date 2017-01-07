@@ -3,7 +3,8 @@
 
 In Docker directory, run the commands :
 ```bash
-$ docker build -t ben/php_apache ./php_apache/
+$ docker build -t ben/apache ./apache/
+$ docker build -t ben/php-fpm:7.0 ./php-fpm7.0/
 $ docker build -t ben/data_application ./data_application/
 $ docker build -t ben/data_sql ./data_sql/
 $ docker build -t ben/sql ./sql/
@@ -39,12 +40,12 @@ $ docker ps
 
 With the ID, you can use composer to download vendors :
 ```bash
-$ docker exec 22e642982db4 composer install
+$ docker exec <ID> composer install
 ```
 
 4 : Test the application
 -----------------------------
-Symfony application : [http://localhost:60000/web/app_dev.php](http://localhost:60000/web/app_dev.php)
+Symfony application : [http://localhost:60000/app_dev.php](http://localhost:60000/app_dev.php)
 
 PHPMyAdmin : [http://localhost:60002](http://localhost:60002)
 
